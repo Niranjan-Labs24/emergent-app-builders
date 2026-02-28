@@ -9,7 +9,7 @@ const Cadlenly = () => {
         opacity: 1,
       }}>
         {/* Shadow/Offset Effect */}
-        <div className="absolute top-2 left-2 w-full h-full bg-gray-200 rounded-[24px]"></div>
+        <div className="absolute top-2 left-2 w-full h-full bg-lovable-gradient opacity-30 rounded-[24px]"></div>
 
         {/* Main Widget */}
         <div className="relative h-full bg-white border-[0.5px] border-black rounded-[24px] overflow-hidden shadow-sm">
@@ -17,7 +17,7 @@ const Cadlenly = () => {
             <iframe
               src={CADLENLY_URL}
               className="w-full h-full"
-              title="Schedule a meeting with Cursor Coder"
+              title="Schedule a meeting with Lovable App Builder"
             />
           </div>
         </div>

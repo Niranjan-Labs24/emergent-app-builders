@@ -46,20 +46,20 @@ export interface FAQItem {
 
 export const pricingFAQs: FAQItem[] = [
   {
-    question: "Why is Cursor AI faster than traditional development?",
-    answer: "Cursor AI allows us to architect, write, and debug code at 2–4× the speed of traditional IDEs. By leveraging AI-native workflows, our experts spend less time on boilerplate and more time on your core business logic."
+    question: "What kinds of apps can you build with Lovable?",
+    answer: "We build SaaS platforms, MVPs, web apps, customer portals, internal tools, e-commerce stores, AI-powered products, dashboards, booking systems, marketplace apps, and landing pages — all using Lovable.dev as the primary build tool. If it can be described in plain English and runs in a browser, we can build it with Lovable."
   },
   {
-    question: "How do your hourly blocks work?",
-    answer: "You purchase blocks of development time that can be used for any task—from building new features to fixing bugs. This flexible model ensures you only pay for the high-impact work we deliver."
+    question: "Do I own the code you build?",
+    answer: "Yes — 100%. All code, database schema, and assets are yours from day one. We deliver the project via a clean GitHub repository with full documentation. We sign NDAs before starting any work, and you retain complete intellectual property ownership with no strings attached."
   },
   {
-    question: "Can I scale my team or change models?",
-    answer: "Absolutely. You can scale up to a dedicated team or pause your blocks anytime. We are built for agility, allowing you to move fast when you need to and save costs when you don't."
+    question: "Can you rescue or fix my existing Lovable project?",
+    answer: "Yes — this is one of our most popular services. Whether your Lovable app is stuck in a loop, has broken Supabase connections, security vulnerabilities, or simply isn't doing what you need, we diagnose and fix the issue efficiently."
   },
   {
-    question: "What technology stacks do you support?",
-    answer: "Our experts specialize in modern full-stack development, including React, Next.js, Node.js, and various cloud infrastructures, all optimized using Cursor AI's advanced capabilities."
+    question: "How much does it cost to build a Lovable app?",
+    answer: "Our pricing is flexible and transparent. You can choose from hourly blocks for small tasks, or volume packages for larger projects. We handle all Lovable platform credits and subscriptions, so you never have to worry about surprise costs."
   }
 ];
 

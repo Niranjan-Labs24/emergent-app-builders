@@ -13,28 +13,28 @@ import GlobalDotAccent from "@/components/GlobalDotAccent"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cursorcoders.ai"),
-  title: "Hire Cursor Coders | Expert Cursor AI Developers for Hire",
+  metadataBase: new URL("https://lovableappbuilders.com"),
+  title: "Lovable App Builders | Expert Lovable Developers for Hire",
   description:
-    "Hire expert Cursor AI developers who build your software 3× faster. Dedicated Cursor coders for startups, SaaS and enterprise. Same-week start. Free consultation.",
-  keywords: "Cursor AI Developers, Cursor Coders, Hire Cursor Experts, AI Workflow Automation",
+    "We are a certified Lovable Partner agency — expert Lovable.dev builders who turn your idea into a production-ready app, faster than any traditional dev team.",
+  keywords: "Lovable App Builders, Lovable Developers, Hire Lovable Experts, AI App Development, No-Code Apps",
   verification: {
     google: "dvHTOSJR4zdlxAgVgmxbghvshaT34Zee1oA0hg_3Qc0",
   },
   alternates: {
-    canonical: "https://cursorcoders.ai",
+    canonical: "https://lovableappbuilders.com",
   },
   openGraph: {
-    title: "Hire Cursor AI Developers | CursorCoders.ai",
-    description: "The world's leading Cursor AI dev team. Build 3X faster. Same-week start.",
-    url: "https://cursorcoders.ai",
-    siteName: "Cursor Coders",
+    title: "Hire Lovable App Builders | Lovableappbuilders.com",
+    description: "The world's leading Lovable dev team. Build faster. Ship in days.",
+    url: "https://lovableappbuilders.com",
+    siteName: "Lovable App Builders",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Cursor Coders Hero Image",
+        alt: "Lovable App Builders Hero Image",
       },
     ],
     locale: "en_US",

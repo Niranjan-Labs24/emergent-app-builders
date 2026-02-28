@@ -15,22 +15,22 @@ const LandingPage: FC = () => {
           <div className="space-y-8 md:space-y-12">
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold tracking-[-0.03em] text-black leading-tight lg:leading-[63px]">
-                Stop <span className="text-gray-400">guessing.<br className="hidden sm:block" />
-                Start shipping</span> with AI.
+                Describe your app.<br className="hidden sm:block" />
+                <span className="text-lovable-gradient">We build it with Lovable. You ship it.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed">
-                We design, build, and deploy production-ready software using Cursor AI — the world&apos;s fastest code editor. For startups, SaaS teams, and enterprises who need to move faster.
+                We are a certified Lovable Partner agency — expert Lovable.dev builders who turn your idea into a production-ready app, faster than any traditional dev team, and without the credit-burn frustration of doing it alone.
               </p>
             </div>
 
             {/* Benefits List */}
             <ul className="space-y-4 md:space-y-5">
               {[
-                "Cursor AI consultation to scope and architect the right build",
-                "Production-ready code shipped 2–4× faster than traditional teams",
-                "Seamless integrations across your existing SaaS and API stack",
-                "Fewer bugs, cleaner code, faster iteration cycles",
-                "Clear ownership — you get the repo, the docs, and the IP",
+                "Expert Lovable app consultation — we scope, prompt-engineer, and architect for you",
+                "Full-stack apps, MVPs, and SaaS tools shipped in days, not months",
+                "Supabase backend, auth, and database — wired up correctly from the start",
+                "No credit waste — we build clean, efficient Lovable prompts that get it right first time",
+                "Full code ownership — GitHub handover, documented, yours forever",
               ].map((benefit, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="mt-1 bg-black rounded-full p-0.5 flex-shrink-0">
@@ -47,18 +47,18 @@ const LandingPage: FC = () => {
                 <Link 
                   href={CADLENLY_URL}
                   target="_blank"
-                  className="inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white transition-all text-base text-center whitespace-nowrap border-[1px] border-black"
+                  className="inline-flex items-center justify-center bg-lovable-gradient text-white transition-all text-base text-center whitespace-nowrap border-[1px] border-black border-opacity-20 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 font-bold tracking-wide"
                   style={{
-                    width: '280px',
+                    width: '320px',
                     height: '72px',
                     borderRadius: '12px',
-                    padding: '20px 52px',
+                    padding: '20px 40px',
                     gap: '8px',
                     opacity: 1,
                     boxShadow: '2px 2px 0px 0px rgba(0,0,0,1)',
                   }}
                 >
-                  Book free Cursor dev call
+                  Book free app-build call →
                 </Link>
                 <div className="w-full max-w-[280px] flex justify-center">
                   <p className="text-sm text-gray-500 font-bold flex items-center gap-2">
@@ -107,35 +107,41 @@ const LandingPage: FC = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 w-full border-t border-gray-200 py-12 md:py-16 min-h-[257px]">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-8">
+      <section className="relative w-full border-t border-gray-200 py-12 md:py-16 min-h-[257px] overflow-hidden">
+        {/* Background gradient overlay with low opacity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FF52B4]/5 via-[#A855F7]/5 to-[#3B82F6]/5 z-0"></div>
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-8 relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-4 gap-y-0 lg:gap-8">
-            {[
+            {([] as Array<{ icon: string; title: string; desc: string; label?: string }>).concat([
               {
                 icon: "/icons/Frame 2147225439 (2).png",
-                title: "Full-Stack App Development",
-                desc: "From architecture to deployment — faster and cleaner than traditional builds.",
+                title: "Idea to Live App",
+                desc: "Got a startup idea or concept to validate? We build your MVP with Lovable in days — not weeks.",
               },
               {
                 icon: "/icons/Frame 2147225439.png",
-                title: "Dedicated Cursor Dev Teams",
-                desc: "Embed a team of Cursor AI developers directly into your workflow from week one.",
+                title: "We Maintain What we Build",
+                desc: "Post-launch support and feature additions — optional retainer",
               },
               {
                 icon: "/icons/Frame 2147225439 (3).png",
-                title: "MVP Builds in Days",
-                desc: "Launch your idea before the market moves. We Refine MVPs at 3× the speed of a traditional dev team.",
+                title: "SCALE UP OR PAUSE ANYTIME",
+                desc: "Flexible — hourly blocks, monthly sprints, or full project",
               },
               {
                 icon: "/icons/Frame 2147225439 (1).png",
-                title: "Hourly blocks. Starts at $30/hr",
-                desc: "NO HIDDEN FEES OR SURPRISES",
-                label: "SCALE UP OR PAUSE ANYTIME"
+                title: "NO SURPRISE COSTS",
+                desc: "Transparent pricing. We handle the Lovable credits, not you.",
               },
-            ].map((feature, index) => (
+            ]).map((feature, index) => (
               <div key={index} className="flex flex-col w-full">
                 <div className="flex flex-col items-center text-center gap-4 md:gap-6 md:items-start md:text-left">
-                  <div className="p-2 md:p-3 bg-white rounded-xl w-fit shadow-sm border border-gray-100">
+                  <div className={`p-2 md:p-3 bg-white rounded-xl w-fit shadow-sm border border-gray-100 border-b-4 ${
+                      index === 0 ? 'border-b-[#FF52B4]' :
+                      index === 1 ? 'border-b-[#D946EF]' :
+                      index === 2 ? 'border-b-[#A855F7]' :
+                      'border-b-[#3B82F6]'
+                    }`}>
                     <Image
                       src={feature.icon}
                       alt={feature.title}

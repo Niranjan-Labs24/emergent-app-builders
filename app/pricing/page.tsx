@@ -68,7 +68,7 @@ const PricingPage: FC = () => {
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center mb-8 md:mb-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight mb-6">
-          Simple pricing. Serious speed.
+          Simple pricing. We handle the Lovable credits.
         </h1>
       </div>
 
@@ -92,9 +92,9 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-white border-2 border-black rounded-xl font-bold text-black hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95"
+                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
-                Book free Cursor dev call
+                Book free app-build call →
               </Link>
 
               <div className="space-y-5">
@@ -109,8 +109,10 @@ const PricingPage: FC = () => {
           </div>
 
           <div className="bg-white border border-gray-100 rounded-[2.5rem] flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-            <div className="bg-gray-50 p-8 md:p-10 space-y-8">
-              <div className="space-y-2">
+            <div className="relative p-8 md:p-10 space-y-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF52B4]/5 via-[#A855F7]/5 to-[#3B82F6]/5 z-0"></div>
+              
+              <div className="space-y-2 relative z-10">
                 <h3 className="text-xl font-bold text-black">Volume package</h3>
                 <div className="flex items-baseline gap-1">
                   <span className="text-5xl font-extrabold text-black">
@@ -124,9 +126,9 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-black border-2 border-black rounded-xl font-bold text-white hover:bg-gray-800 transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95"
+                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
-                Book free Cursor dev call
+                Book free app-build call →
               </Link>
             </div>
 
@@ -157,9 +159,9 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-white border-2 border-black rounded-xl font-bold text-black hover:bg-gray-50 transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95"
+                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
-                Book free Cursor dev call
+                Book free app-build call →
               </Link>
 
               <div className="space-y-5">

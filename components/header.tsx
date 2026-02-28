@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button"
-import { Menu } from "lucide-react"
+import { Menu, Heart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -41,17 +41,23 @@ export const Header: FC = () => {
         <div className="flex-1 flex items-center">
           {/* Desktop Logo */}
           <div className="hidden md:block">
-            <Link href="/" className="text-2xl tracking-tighter flex items-center">
-              <span className="font-extrabold text-black">Cursor</span>
-              <span className="font-light text-gray-400 ml-1.5">Coder</span>
+            <Link href="/" className="text-2xl tracking-tighter flex items-center gap-2">
+              <div className="flex items-center justify-center p-1.5 rounded-xl bg-lovable-gradient shadow-sm">
+                <Heart className="h-5 w-5 text-white fill-white" />
+              </div>
+              <span className="font-extrabold text-black">Lovable</span>
+              <span className="font-light text-lovable-gradient ml-1.5">App Builder</span>
             </Link>
           </div>
 
           {/* Mobile Logo */}
           <div className="md:hidden">
-            <Link href="/" className="text-xl tracking-tighter flex items-center">
-              <span className="font-extrabold text-black">Cursor</span>
-              <span className="font-light text-gray-400 ml-1">Coder</span>
+            <Link href="/" className="text-xl tracking-tighter flex items-center gap-2">
+              <div className="flex items-center justify-center p-1.5 rounded-lg bg-lovable-gradient shadow-sm">
+                <Heart className="h-4 w-4 text-white fill-white" />
+              </div>
+              <span className="font-extrabold text-black">Lovable</span>
+              <span className="font-light text-lovable-gradient ml-1">App Builder</span>
             </Link>
           </div>
         </div>
@@ -81,17 +87,17 @@ export const Header: FC = () => {
           <div className="hidden md:block">
             <Button
               asChild
-              className="bg-black hover:bg-gray-800 text-white rounded-xl transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black text-lg"
+              className="bg-lovable-gradient text-white rounded-xl transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 border-[1px] border-black text-lg border-opacity-20"
               style={{
-                width: '253px',
+                width: '280px',
                 height: '60px',
                 padding: '14px 35px',
                 gap: '8px',
                 opacity: 1,
               }}
             >
-              <Link href={CADLENLY_URL} target="_blank">
-                Book free Cursor dev call
+              <Link href={CADLENLY_URL} target="_blank" className="font-bold tracking-wide">
+                Book free app-build call →
               </Link>
             </Button>
           </div>
@@ -106,9 +112,12 @@ export const Header: FC = () => {
               </SheetTrigger>
               <SheetContent side="top" className="h-[50vh] flex flex-col p-0 border-none overflow-hidden">
                 <div className="flex-none flex items-center justify-between px-6 py-4 border-b border-gray-50">
-                  <Link href="/" className="text-xl tracking-tighter flex items-center">
-                    <span className="font-extrabold text-black">Cursor</span>
-                    <span className="font-light text-gray-400 ml-1">Coder</span>
+                  <Link href="/" className="text-xl tracking-tighter flex items-center gap-2">
+                    <div className="flex items-center justify-center p-1.5 rounded-lg bg-lovable-gradient shadow-sm">
+                      <Heart className="h-4 w-4 text-white fill-white" />
+                    </div>
+                    <span className="font-extrabold text-black">Lovable</span>
+                    <span className="font-light text-lovable-gradient ml-1">App Builder</span>
                   </Link>
                 </div>
                 
@@ -132,16 +141,16 @@ export const Header: FC = () => {
                     <Link 
                       href={CADLENLY_URL} 
                       target="_blank"
-                      className="inline-flex items-center justify-center bg-black hover:bg-gray-800 text-white rounded-xl text-center transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black text-base"
+                      className="inline-flex items-center justify-center bg-lovable-gradient text-white rounded-xl text-center transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 text-base font-bold tracking-wide"
                       style={{
-                        width: '253px',
+                        width: '280px',
                         height: '60px',
-                        padding: '14px 35px',
+                        padding: '14px 20px',
                         gap: '8px',
                         opacity: 1,
                       }}
                     >
-                      Book free Cursor dev call
+                      Book free app-build call →
                     </Link>
                   </SheetClose>
                 </div>

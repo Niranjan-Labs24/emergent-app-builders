@@ -138,6 +138,15 @@
     @apply bg-background text-foreground font-sans;
   }
 
+  /* Lovable App Builders gradient */
+  .bg-lovable-gradient {
+    @apply bg-gradient-to-r from-[#FF52B4] via-[#A855F7] to-[#3B82F6];
+  }
+
+  .text-lovable-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF52B4] via-[#A855F7] to-[#3B82F6];
+  }
+
   body::before {
     content: "";
     position: absolute;

@@ -5,24 +5,20 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "What is Cursor AI and how do you use it?",
-    answer: "Cursor AI is the world's most advanced AI-native code editor. We use it to architect, write, and debug production-ready code at 2–4× the speed of traditional development workflows, ensuring faster shipping cycles without compromising quality."
+    question: "What kinds of apps can you build with Lovable?",
+    answer: "We build SaaS platforms, MVPs, web apps, customer portals, internal tools, e-commerce stores, AI-powered products, dashboards, booking systems, marketplace apps, and landing pages — all using Lovable.dev as the primary build tool. If it can be described in plain English and runs in a browser, we can build it with Lovable."
   },
   {
-    question: "How fast can you build an MVP?",
-    answer: "Most MVPs are launched in days or weeks, rather than months. By embedding Cursor AI developers directly into your workflow, we refine and build products at 3× the speed of a traditional development team."
+    question: "Do I own the code you build?",
+    answer: "Yes — 100%. All code, database schema, and assets are yours from day one. We deliver the project via a clean GitHub repository with full documentation. We sign NDAs before starting any work, and you retain complete intellectual property ownership with no strings attached."
   },
   {
-    question: "Do I own the code and the Intellectual Property?",
-    answer: "Yes, 100%. You get full ownership of the repository, the documentation, and all associated Intellectual Property (IP) from day one."
+    question: "Can you rescue or fix my existing Lovable project?",
+    answer: "Yes — this is one of our most popular services. Whether your Lovable app is stuck in a loop, has broken Supabase connections, security vulnerabilities, or simply isn't doing what you need, we diagnose and fix the issue efficiently."
   },
   {
-    question: "What is your pricing model?",
-    answer: "We offer flexible engagement models based on hourly blocks, starting at $30/hr. You can scale up or pause anytime with no hidden fees or surprises."
-  },
-  {
-    question: "Which regions do you support?",
-    answer: "We are trusted by founders and CTOs across the UK, US, EU, AU, and UAE, providing seamless integration across various time zones and SaaS stacks."
+    question: "How much does it cost to build a Lovable app?",
+    answer: "Our pricing is flexible and transparent. You can choose from hourly blocks for small tasks, or volume packages for larger projects. We handle all Lovable platform credits and subscriptions, so you never have to worry about surprise costs."
   }
 ];
 
@@ -96,7 +92,7 @@ export default function CursorFAQ() {
           Frequently asked questions
         </h2>
         <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
-          Everything you need to know about working with Cursor Coder.
+          Everything you need to know about working with Lovable App Builders.
         </p>
       </div>
 
