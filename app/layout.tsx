@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased font-sans">
-        <GoogleAnalytics gaId="G-697VHW2SEJ" />
+        <GoogleAnalytics gaId="G-Y493NCK899" />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
