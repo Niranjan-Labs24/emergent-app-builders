@@ -7,24 +7,32 @@ export interface BenefitItem {
 export const benefitItems: BenefitItem[] = [
   {
     package: 'STARTER',
-    labels: ['Direct access to Cursor AI experts', 'Basic app creation and logic modification', 'Clean codebase documentation', 'Email support (48-hour response time)', 'Up to 2 revision rounds per feature']
+    labels: [
+      'Direct access to Lovable AI experts',
+      'Basic app creation and logic modification',
+      'Clean codebase documentation',
+      'Email support (48-hour response time)',
+      'Up to 2 revision rounds per feature'
+    ]
   },
   {
     package: 'PLUS',
-    labels: ['Multiple project features and complex UI',
+    labels: [
+      'Multiple project features and complex UI',
       'Advanced API integrations',
       'System architecture planning',
       'Dedicated project manager assignment',
       'Comprehensive documentation package',
       'Priority email + Slack support (24-hour response)',
-      'Performance and security review'],
+      'Performance and security review'
+    ],
     bestFor: 'Best Suited for Growing companies, established businesses, agencies with multiple automation needs'
   },
   {
     package: 'PRO',
     labels: [
       'Monthly strategy and roadmap calls',
-      'Dedicated development team (2-3 Cursor experts)',
+      'Dedicated development team (2-3 Lovable experts)',
       'Priority support (10-hour response, 3-hour for urgent)',
       'Production monitoring and cloud setup',
       'Weekly progress reporting',

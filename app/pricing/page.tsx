@@ -67,8 +67,13 @@ const PricingPage: FC = () => {
     <div className="flex flex-col pt-4 md:pt-6">
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center mb-8 md:mb-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black leading-tight mb-6">
-          Simple pricing. We handle the Lovable credits.
+        <h1 className="flex flex-col gap-2">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-black leading-tight">
+            Simple <span className="text-lovable-gradient">pricing</span>
+          </span>
+          <span className="text-xl md:text-2xl font-medium text-gray-400">
+            We handle the Lovable credits.
+          </span>
         </h1>
       </div>
 
