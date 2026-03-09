@@ -8,7 +8,8 @@ export const Footer: FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           
-            <p className="text-base md:text-lg text-gray-500 font-medium">© {new Date().getFullYear()} Lovable App Builders. All rights reserved.</p>
+            <p className="text-base md:text-lg text-gray-500 font-medium">© {new Date().getFullYear()} Emergent App Builders. All rights reserved.</p>
+            <p className="text-sm text-gray-400 font-medium">A Labs 24 Company.</p>
 
        
           <div className="flex items-center gap-10 justify-center flex-1">
@@ -25,10 +26,10 @@ export const Footer: FC = () => {
             {/* <Link href="https://instagram.com" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">
               <Instagram className="h-5 w-5 md:h-6 md:w-6" />
             </Link> */}
-            <Link href="https://linkedin.com/company/lovable-app-builders" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">
+            <Link href="https://linkedin.com/company/emergent-app-builders" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">
               <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
             </Link>
-            <Link href="https://x.com/lovablebuilders" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">
+            <Link href="https://x.com/emergentbuilders" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">
               <Twitter className="h-5 w-5 md:h-6 md:w-6" />
             </Link>
             <Link href="https://facebook.com" target="_blank" className="p-2 text-gray-500 hover:text-black transition-colors transform hover:scale-110">

@@ -1,7 +1,7 @@
 .offer-bar {
   position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #c41e3a 0%, #165b33 100%);
+  background: linear-gradient(135deg, #00A86B 0%, #004D3F 100%);
   color: #ffffff;
   padding: 12px 0;
   overflow: hidden;
@@ -34,7 +34,7 @@
   right: 20px;
   transform: translateY(-50%);
   background: #ffffff;
-  color: #c41e3a;
+  color: #00A86B;
   padding: 8px 20px;
   border-radius: 25px;
   font-size: 14px;

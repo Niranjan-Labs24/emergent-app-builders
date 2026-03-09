@@ -69,10 +69,10 @@ const PricingPage: FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center mb-8 md:mb-12">
         <h1 className="flex flex-col gap-2">
           <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-black leading-tight">
-            Simple <span className="text-lovable-gradient">pricing</span>
+            Simple <span className="text-emergent-gradient">pricing</span>
           </span>
           <span className="text-xl md:text-2xl font-medium text-gray-400">
-            We handle the Lovable credits.
+            We handle the Emergent credits.
           </span>
         </h1>
       </div>
@@ -97,7 +97,7 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
                 Book free app-build call →
               </Link>
@@ -131,7 +131,7 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
                 Book free app-build call →
               </Link>
@@ -164,7 +164,7 @@ const PricingPage: FC = () => {
               <Link 
                 href={CADLENLY_URL}
                 target="_blank"
-                className="block w-full text-center py-4 bg-lovable-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
               >
                 Book free app-build call →
               </Link>

@@ -15,31 +15,33 @@ const LandingPage: FC = () => {
           <div className="space-y-8 md:space-y-12">
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold tracking-[-0.03em] text-black leading-tight lg:leading-[63px]">
-                Describe your app.<br className="hidden sm:block" />
-                <span className="text-lovable-gradient">We build it with Lovable. You ship it.</span>
+                Your idea is in your head.<br className="hidden sm:block" />
+                <span className="text-emergent-gradient">We build it with Emergent — and ship it to the App Store.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed">
-                We are a certified Lovable Partner agency — expert Lovable.dev builders who turn your idea into a production-ready app, faster than any traditional dev team, and without the credit-burn frustration of doing it alone.
+                We are expert Product builders — a company that uses Emergent's AI-powered platform to build, test, and deploy production-ready web and mobile apps for founders, startups, and enterprise teams, faster and more affordably than a traditional dev team.
               </p>
             </div>
-
+ 
             {/* Benefits List */}
-            <ul className="space-y-4 md:space-y-5">
-              {[
-                "Expert Lovable app consultation — we scope, prompt-engineer, and architect for you",
-                "Full-stack apps, MVPs, and SaaS tools shipped in days, not months",
-                "Supabase backend, auth, and database — wired up correctly from the start",
-                "No credit waste — we build clean, efficient Lovable prompts that get it right first time",
-                "Full code ownership — GitHub handover, documented, yours forever",
-              ].map((benefit, index) => (
-                <li key={index} className="flex items-start gap-4">
-                  <div className="mt-1 bg-black rounded-full p-0.5 flex-shrink-0">
-                    <Check className="h-4 w-4 text-white font-bold" />
-                  </div>
-                  <span className="text-base md:text-xl font-bold text-black">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="relative p-2 overflow-hidden">
+              <ul className="space-y-2 relative z-10">
+                {[
+                  "→Expert Product consultation — we scope, architect, and plan your build so Emergent's agents produce the right output first time",
+                  "→Web apps AND native mobile apps (iOS + Android) — built with Emergent and published to the App Store and Play Store by our team",
+                  "→Emergent's full build pipeline utilised — Builder, Designer, Quality, Deploy and Ops stages run correctly for every project",
+                  "→Self-debugging post-launch — we configure Emergent's Ops agent to monitor and auto-patch your live app",
+                  "→Full code ownership — clean GitHub repo, documented, yours forever, no lock-in",
+                ].map((benefit, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="mt-1 bg-black rounded-full p-0.5 flex-shrink-0">
+                      <Check className="h-4 w-4 text-white font-bold" />
+                    </div>
+                    <span className="text-sm md:text-base font-bold text-black">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* CTA and Trust Bar */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-6 lg:gap-8 pt-4">
@@ -47,7 +49,7 @@ const LandingPage: FC = () => {
                 <Link 
                   href={CADLENLY_URL}
                   target="_blank"
-                  className="inline-flex items-center justify-center bg-lovable-gradient text-white transition-all text-base text-center whitespace-nowrap border-[1px] border-black border-opacity-20 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 font-bold tracking-wide"
+                  className="inline-flex items-center justify-center bg-emergent-gradient text-white transition-all text-base text-center whitespace-nowrap border-[1px] border-black border-opacity-20 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 font-bold tracking-wide"
                   style={{
                     width: '320px',
                     height: '72px',
@@ -109,38 +111,38 @@ const LandingPage: FC = () => {
 
       <section className="relative w-full border-t border-gray-200 py-12 md:py-16 min-h-[257px] overflow-hidden">
         {/* Background gradient overlay with low opacity */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FF52B4]/5 via-[#A855F7]/5 to-[#3B82F6]/5 z-0"></div>
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-8 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00A86B]/5 via-[#00BF72]/5 to-[#007F5F]/5 z-0"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-4 gap-y-0 lg:gap-8">
-            {([] as Array<{ icon: string; title: string; desc: string; label?: string }>).concat([
+            {([
               {
                 icon: "/icons/Frame 2147225439 (2).png",
-                title: "Idea to Live App",
-                desc: "Got a startup idea or concept to validate? We build your MVP with Lovable in days — not weeks.",
+                title: "MVP Builds — Idea to Live App",
+                desc: "Launch your startup idea before the market moves. We use Emergent.sh to build, test, and deploy your MVP in days — not weeks. Real backend, real users, real feedback.",
               },
               {
                 icon: "/icons/Frame 2147225439.png",
-                title: "We Maintain What we Build",
-                desc: "Post-launch support and feature additions — optional retainer",
+                title: "Full-Stack SaaS App Development",
+                desc: "End-to-end SaaS platforms with auth, subscriptions (Stripe), user dashboards, and admin panels — all built and deployed through Emergent's multi-agent system.",
               },
               {
                 icon: "/icons/Frame 2147225439 (3).png",
-                title: "SCALE UP OR PAUSE ANYTIME",
-                desc: "Flexible — hourly blocks, monthly sprints, or full project",
+                title: "EMERGENT'S FULL AGENT SYSTEM — PROPERLY USED",
+                desc: "We orchestrate all 5 of Emergent's AI agents so your build is done right",
               },
               {
                 icon: "/icons/Frame 2147225439 (1).png",
-                title: "NO SURPRISE COSTS",
-                desc: "Transparent pricing. We handle the Lovable credits, not you.",
+                title: "NO HIDDEN COSTS",
+                desc: "We handle the Emergent credits. You pay for outcomes, not trial and error.",
               },
             ]).map((feature, index) => (
               <div key={index} className="flex flex-col w-full">
                 <div className="flex flex-col items-center text-center gap-4 md:gap-6 md:items-start md:text-left">
                   <div className={`p-2 md:p-3 bg-white rounded-xl w-fit shadow-sm border border-gray-100 border-b-4 ${
-                      index === 0 ? 'border-b-[#FF52B4]' :
-                      index === 1 ? 'border-b-[#D946EF]' :
-                      index === 2 ? 'border-b-[#A855F7]' :
-                      'border-b-[#3B82F6]'
+                      index === 0 ? 'border-b-[#00A86B]' :
+                      index === 1 ? 'border-b-[#00BF72]' :
+                      index === 2 ? 'border-b-[#007F5F]' :
+                      'border-b-[#004D3F]'
                     }`}>
                     <Image
                       src={feature.icon}
@@ -155,13 +157,8 @@ const LandingPage: FC = () => {
                       {feature.title}
                     </h3>
                     <p className="text-[10px] md:text-xs text-black font-medium md:uppercase tracking-wider">
-                      {feature.label || feature.desc}
+                      {feature.desc}
                     </p>
-                    {feature.label && (
-                      <p className="text-xs text-gray-500 font-medium">
-                        {feature.desc}
-                      </p>
-                    )}
                   </div>
                 </div>
               </div>

@@ -5,20 +5,28 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqData = [
   {
-    question: "What kinds of apps can you build with Lovable?",
-    answer: "We build SaaS platforms, MVPs, web apps, customer portals, internal tools, e-commerce stores, AI-powered products, dashboards, booking systems, marketplace apps, and landing pages — all using Lovable.dev as the primary build tool. If it can be described in plain English and runs in a browser, we can build it with Lovable."
+    question: "What is Emergent.sh and what is an Emergent app builder?",
+    answer: "Emergent.sh is an AI-powered app development platform that builds full-stack web and mobile applications from plain language descriptions. The platform uses a multi-stage build pipeline — covering architecture, design, quality assurance, deployment, and live monitoring — to generate production-ready code. An Emergent app builder is an expert developer who knows how to use Emergent.sh professionally: how to scope projects correctly, structure build instructions to get clean results, handle backend integrations, configure authentication, and manage App Store publishing. Emergent App Builders is a specialist agency providing these expert services — we use Emergent.sh as our primary development tool."
   },
   {
-    question: "Do I own the code you build?",
-    answer: "Yes — 100%. All code, database schema, and assets are yours from day one. We deliver the project via a clean GitHub repository with full documentation. We sign NDAs before starting any work, and you retain complete intellectual property ownership with no strings attached."
+    question: "Can Emergent really build mobile apps for the App Store and Play Store?",
+    answer: "Yes — and this is one of Emergent's key differentiators. Emergent's Mobile Agent builds native iOS and Android apps using React Native and Expo, which can be published directly to Apple's App Store and Google's Play Store. In fact, 80–90% of Emergent builds are mobile applications, making it the most capable AI platform for mobile development. Our team handles the full submission process — from building the app to managing App Store certificates and publishing."
   },
   {
-    question: "Can you rescue or fix my existing Lovable project?",
-    answer: "Yes — this is one of our most popular services. Whether your Lovable app is stuck in a loop, has broken Supabase connections, security vulnerabilities, or simply isn't doing what you need, we diagnose and fix the issue efficiently."
+    question: "How is hiring an Emergent builder different from using Emergent myself?",
+    answer: "Emergent.sh is powerful, but getting consistent production-quality results takes experience. Without knowing how to scope a project correctly inside Emergent, users burn through credits, hit dead ends, and end up with apps that look fine but break under real usage. Our developers have built dozens of apps on the platform — we know what works, what to avoid, and how to structure builds that produce clean, scalable, secure code rather than a fragile prototype."
   },
   {
-    question: "How much does it cost to build a Lovable app?",
-    answer: "Our pricing is flexible and transparent. You can choose from hourly blocks for small tasks, or volume packages for larger projects. We handle all Lovable platform credits and subscriptions, so you never have to worry about surprise costs."
+    question: "Does Emergent's monitoring really auto-fix live apps?",
+    answer: "Yes — Emergent.sh includes a built-in Ops stage that monitors live applications and can automatically detect and patch issues if something crashes or underperforms after deployment. This is a genuine platform capability that reduces the need for reactive human debugging. As part of our service, we configure and enable this monitoring layer on all production builds so your app keeps running smoothly without you needing to manage it manually."
+  },
+  {
+    question: "Do I own the code that Emergent builds?",
+    answer: "Yes — 100%. Emergent supports GitHub export, and all source code, database schema, and assets belong to you. We deliver the full repository with documentation on project completion. NDAs are signed before any work begins, and you retain complete intellectual property ownership with no strings attached and no platform lock-in."
+  },
+  {
+    question: "What types of apps can you build with Emergent?",
+    answer: "Using Emergent.sh as our build platform, we can deliver web apps, native mobile apps (iOS + Android), SaaS platforms, internal tools, admin dashboards, e-commerce stores, AI-powered products, CRMs, ERPs, logistics tools, booking systems, and marketplace apps. Emergent supports complex logic, third-party API integrations (Stripe, Shopify, OpenAI, and more), authentication, and enterprise-grade security."
   }
 ];
 
@@ -92,7 +100,7 @@ export default function CursorFAQ() {
           Frequently asked questions
         </h2>
         <p className="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">
-          Everything you need to know about working with Lovable App Builders.
+          Everything you need to know about working with Emergent App Builders.
         </p>
       </div>
 

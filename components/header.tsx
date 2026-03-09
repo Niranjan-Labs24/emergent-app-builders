@@ -42,22 +42,16 @@ export const Header: FC = () => {
           {/* Desktop Logo */}
           <div className="hidden md:block">
             <Link href="/" className="text-2xl tracking-tighter flex items-center gap-2">
-              <div className="flex items-center justify-center p-1.5 rounded-xl bg-lovable-gradient shadow-sm">
-                <Heart className="h-5 w-5 text-white fill-white" />
-              </div>
-              <span className="font-extrabold text-black">Lovable</span>
-              <span className="font-light text-lovable-gradient ml-1.5">App Builder</span>
+              <span className="font-extrabold text-black">Emergent</span>
+              <span className="font-light text-emergent-gradient ml-1.5">App Builder</span>
             </Link>
           </div>
 
           {/* Mobile Logo */}
           <div className="md:hidden">
             <Link href="/" className="text-xl tracking-tighter flex items-center gap-2">
-              <div className="flex items-center justify-center p-1.5 rounded-lg bg-lovable-gradient shadow-sm">
-                <Heart className="h-4 w-4 text-white fill-white" />
-              </div>
-              <span className="font-extrabold text-black">Lovable</span>
-              <span className="font-light text-lovable-gradient ml-1">App Builder</span>
+              <span className="font-extrabold text-black">Emergent</span>
+              <span className="font-light text-emergent-gradient ml-1">App Builder</span>
             </Link>
           </div>
         </div>
@@ -87,7 +81,7 @@ export const Header: FC = () => {
           <div className="hidden md:block">
             <Button
               asChild
-              className="bg-lovable-gradient text-white rounded-xl transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 border-[1px] border-black text-lg border-opacity-20"
+              className="bg-emergent-gradient text-white rounded-xl transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 border-[1px] border-black text-lg border-opacity-20"
               style={{
                 width: '280px',
                 height: '60px',
@@ -113,11 +107,8 @@ export const Header: FC = () => {
               <SheetContent side="top" className="h-[50vh] flex flex-col p-0 border-none overflow-hidden">
                 <div className="flex-none flex items-center justify-between px-6 py-4 border-b border-gray-50">
                   <Link href="/" className="text-xl tracking-tighter flex items-center gap-2">
-                    <div className="flex items-center justify-center p-1.5 rounded-lg bg-lovable-gradient shadow-sm">
-                      <Heart className="h-4 w-4 text-white fill-white" />
-                    </div>
-                    <span className="font-extrabold text-black">Lovable</span>
-                    <span className="font-light text-lovable-gradient ml-1">App Builder</span>
+                    <span className="font-extrabold text-black">Emergent</span>
+                    <span className="font-light text-emergent-gradient ml-1">App Builder</span>
                   </Link>
                 </div>
                 
@@ -141,7 +132,7 @@ export const Header: FC = () => {
                     <Link 
                       href={CADLENLY_URL} 
                       target="_blank"
-                      className="inline-flex items-center justify-center bg-lovable-gradient text-white rounded-xl text-center transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 text-base font-bold tracking-wide"
+                      className="inline-flex items-center justify-center bg-emergent-gradient text-white rounded-xl text-center transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 text-base font-bold tracking-wide"
                       style={{
                         width: '280px',
                         height: '60px',

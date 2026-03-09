@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { contentfulService } from '@/lib/contentful'
-const baseUrl = 'https://lovableappbuilders.com'
+const baseUrl = 'https://emergentappbuilders.com'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch all published blog posts from Contentful
