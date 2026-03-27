@@ -1,0 +1,194 @@
+"use client";
+
+import { FC, useEffect, useState } from "react"
+import Link from "next/link"
+import Benefit from "./components/benefit"
+import { benefitItems } from "./constants"
+import PricingFAQ from "./components/PricingFAQ"
+import PromotionBanner from "@/components/blog/PromotionBanner"
+import { CADLENLY_URL } from "@/app/constants"
+
+const PricingPage: FC = () => {
+  const [starter, plus, pro] = benefitItems
+  const [currency, setCurrency] = useState("USD")
+  const [symbol, setSymbol] = useState("$")
+  const [loading, setLoading] = useState(true)
+  const [convertedPrices, setConvertedPrices] = useState([50, 40, 30])
+
+  const originalPrices = [50, 40, 30]
+
+  useEffect(() => {
+    document.body.classList.add("no-texture")
+    
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then(async (data) => {
+        let country = data.country 
+        let userCurrency = "USD"
+        let userSymbol = "$"
+
+        if (country === "AU" || country === "AUS") {
+          userCurrency = "AUD"
+          userSymbol = "A$"
+        } else if (country === "US") {
+          userCurrency = "USD"
+          userSymbol = "$"
+        } else if (["DE", "FR", "ES", "IT", "GB", "NL", "BE", "AT", "CH", "SE", "NO", "DK", "FI", "PT", "IE", "GR", "CZ", "PL", "HU", "SK", "SI", "HR", "BA", "ME", "MK", "AL", "RS", "BG", "RO", "MD", "UA", "BY", "RU", "LT", "LV", "EE", "GE", "AM", "AZ"].includes(country)) {
+          userCurrency = "EUR"
+          userSymbol = "€"
+        }
+
+        setCurrency(userCurrency)
+        setSymbol(userSymbol)
+
+        if (userCurrency !== "USD") {
+          const rateRes = await fetch(
+            `https://api.exchangerate.host/live?access_key=afe686e60effa99aeec17bafaa86a824&base=USD&symbols=${userCurrency}`
+          )
+          const rateData = await rateRes.json()
+          const rate = rateData.quotes[`USD${userCurrency}`]
+          setConvertedPrices(originalPrices.map(p => Math.round(p * rate)))
+        } else {
+          setConvertedPrices(originalPrices.map(p => Math.round(p)));
+        }
+        setLoading(false)
+      })
+      .catch((err) => {
+        setConvertedPrices(originalPrices)
+        setLoading(false)
+      })
+
+    return () => {
+      document.body.classList.remove("no-texture")
+    }
+  }, [])
+
+  return (
+    <div className="flex flex-col pt-4 md:pt-6">
+      {/* Page Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center mb-8 md:mb-12">
+        <h1 className="flex flex-col gap-2">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-black leading-tight">
+            Simple <span className="text-emergent-gradient">pricing</span>
+          </span>
+          <span className="text-xl md:text-2xl font-medium text-gray-400">
+            We handle the Emergent credits.
+          </span>
+        </h1>
+      </div>
+
+      {/* Pricing Cards Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* Hourly Model */}
+          <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-10 space-y-10 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold text-black">Hourly model</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-5xl font-extrabold text-black">
+                    {loading ? "$50" : `${symbol}${convertedPrices[0]}`}
+                  </span>
+                  <span className="text-sm font-bold text-black lowercase tracking-wider">per hour</span>
+                </div>
+                <p className="text-lg font-bold text-gray-500">Billed in 10-hour blocks</p>
+              </div>
+
+              <Link 
+                href={CADLENLY_URL}
+                target="_blank"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+              >
+                Book free app-build call →
+              </Link>
+
+              <div className="space-y-5">
+                <h4 className="text-sm font-bold text-black uppercase tracking-wider">Ideal for</h4>
+                <div className="space-y-4">
+                  {starter.labels.map((label) => (
+                    <Benefit key={label} label={label} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white border border-gray-100 rounded-[2.5rem] flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+            <div className="relative p-8 md:p-10 space-y-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF52B4]/5 via-[#A855F7]/5 to-[#3B82F6]/5 z-0"></div>
+              
+              <div className="space-y-2 relative z-10">
+                <h3 className="text-xl font-bold text-black">Volume package</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-5xl font-extrabold text-black">
+                    {loading ? "$40" : `${symbol}${convertedPrices[1]}`}
+                  </span>
+                  <span className="text-sm font-bold text-black lowercase tracking-wider">per hour</span>
+                </div>
+                <p className="text-lg font-bold text-gray-400">Billed in 50-hour blocks</p>
+              </div>
+
+              <Link 
+                href={CADLENLY_URL}
+                target="_blank"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+              >
+                Book free app-build call →
+              </Link>
+            </div>
+
+            <div className="p-8 md:p-10 space-y-5">
+              <h4 className="text-sm font-bold text-black uppercase tracking-wider">Ideal for</h4>
+              <div className="space-y-4">
+                {plus.labels.map((label) => (
+                  <Benefit key={label} label={label} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Monthly Retainer */}
+          <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-10 space-y-10 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold text-black">Monthly Retainer</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-5xl font-extrabold text-black">
+                    {loading ? "$30" : `${symbol}${convertedPrices[2]}`}
+                  </span>
+                  <span className="text-sm font-bold text-black lowercase tracking-wider">per hour</span>
+                </div>
+                <p className="text-lg font-bold text-gray-500">Billed in 100-hour blocks</p>
+              </div>
+
+              <Link 
+                href={CADLENLY_URL}
+                target="_blank"
+                className="block w-full text-center py-4 bg-emergent-gradient rounded-xl font-bold text-white transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-[1px] border-black border-opacity-20 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 tracking-wide"
+              >
+                Book free app-build call →
+              </Link>
+
+              <div className="space-y-5">
+                <h4 className="text-sm font-bold text-black uppercase tracking-wider">Ideal for</h4>
+                <div className="space-y-4">
+                  {pro.labels.map((label) => (
+                    <Benefit key={label} label={label} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <PricingFAQ />
+
+      {/* Promotion Banner */}
+      <PromotionBanner />
+    </div>
+  )
+}
+
+export default PricingPage
